@@ -73,7 +73,7 @@ def convert_notebooks_in_directory(
 
     with ThreadPoolExecutor(max_workers=max_workers) as executor:  # parallelize
         for f in notebook_files:
-            executor.map(convert_notebook, f, format_from, format_to)
+            executor.submit(convert_notebook, f, format_from, format_to)
 
 
 def main():
