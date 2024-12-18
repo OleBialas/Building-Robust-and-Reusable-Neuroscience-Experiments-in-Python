@@ -83,8 +83,10 @@ def main():
         description="Convert Jupyter notebooks to Python scripts recursively"
     )
     parser.add_argument("root", help="Root directory containing notebooks", default=".")
-    parser.add_argument("--from", help="Format to convert from", default="ipynb")
-    parser.add_argument("--to", help="Format to convert to", default="py")
+    parser.add_argument(
+        "-f", "--format_from", help="Format to convert from", default="ipynb"
+    )
+    parser.add_argument("-t", "--format_to", help="Format to convert to", default="py")
     parser.add_argument(
         "--workers", help="Number of parallel workers", type=int, default=4
     )
@@ -92,7 +94,9 @@ def main():
     args = parser.parse_args()
 
     # Convert notebooks
-    convert_notebooks_in_directory(args.directory, args.workers)
+    convert_notebooks_in_directory(
+        args.root, args.format_from, args.format_to, args.workers
+    )
 
 
 if __name__ == "__main__":
