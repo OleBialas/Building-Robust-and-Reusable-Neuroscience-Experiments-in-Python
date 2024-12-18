@@ -11,6 +11,16 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+def get_suffix(file_format):
+
+    if file_format.lower() in ["python", ".py", "py"]:
+        return ".py"
+    elif file_format.lower() in ["notebook", "ipynb", ".ipynb"]:
+        return ".ipynb"
+    else:
+        raise ValueError("Can't find suffix for file format {file_format}")
+
+
 def get_exporter(from_format: str, to_format: str):
 
     if (from_format.lower() in ["python", ".py", "py"]) and (
@@ -35,7 +45,7 @@ def convert_notebook(notebook_path: Path, from_format: str, to_format: str):
         notebook_path (Path): Path to the notebook file
     """
     try:
-        output_path = notebook_path.with_suffix(".py")
+        output_path = notebook_path.with_suffix(get_suffix(from_format))
 
         if output_path.exists():  # Skip if Python file is newer than notebook
             if output_path.stat().st_mtime > notebook_path.stat().st_mtime:
