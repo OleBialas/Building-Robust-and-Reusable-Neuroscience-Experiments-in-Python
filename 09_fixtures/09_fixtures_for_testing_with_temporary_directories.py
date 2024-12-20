@@ -12,6 +12,11 @@
 #     name: python3
 # ---
 
+# %% [markdown]
+# # Fixtures for Testing with Temporary Directories
+#
+# Handling files and directories is a common task in computational neuroscience, especially when working with data pipelines, experiment outputs, or simulation results. This lesson focuses on essential tools for managing files in Python and organizing automated tests for research projects. You'll start by learning pathlib.Path, a modern way to work with file paths in a clear, cross-platform manner. Next, you'll explore tempfile.TemporaryDirectory for creating temporary storage, ensuring experiments don’t clutter your file system. Building on this, you’ll discover how pytest's tmp_path streamlines temporary file management in automated tests. Finally, you’ll learn to create custom fixtures in pytest for setting up complex test environments, enabling more robust, reproducible, and scalable test designs. These tools will help you write cleaner code, avoid common file-handling pitfalls, and develop reliable, well-tested research software.
+
 # %%
 # %pip install pytest>=0.2.2 ipytest requests
 
@@ -22,11 +27,6 @@ import ipytest
 import numpy as np
 import pandas as pd
 ipytest.autoconfig()
-
-# %% [markdown]
-# ## Using Temporary Directories and Test Fixtures to Create Reproducible Automated Tests on Data Files
-#
-# Handling files and directories is a common task in computational neuroscience, especially when working with data pipelines, experiment outputs, or simulation results. This lesson focuses on essential tools for managing files in Python and organizing automated tests for research projects. You'll start by learning pathlib.Path, a modern way to work with file paths in a clear, cross-platform manner. Next, you'll explore tempfile.TemporaryDirectory for creating temporary storage, ensuring experiments don’t clutter your file system. Building on this, you’ll discover how pytest's tmp_path streamlines temporary file management in automated tests. Finally, you’ll learn to create custom fixtures in pytest for setting up complex test environments, enabling more robust, reproducible, and scalable test designs. These tools will help you write cleaner code, avoid common file-handling pitfalls, and develop reliable, well-tested research software.
 
 # %% [markdown]
 # ### Dessecting File Paths into components using the PathLib package

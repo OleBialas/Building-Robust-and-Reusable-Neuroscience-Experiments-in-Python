@@ -280,7 +280,7 @@ with Window() as win:
     assert wait_keys(["space"]) == "space"
     assert len(wait_keys(timed=True)) == 2
 print("Success!")
-    
+
 
 # %% [markdown]
 # ---

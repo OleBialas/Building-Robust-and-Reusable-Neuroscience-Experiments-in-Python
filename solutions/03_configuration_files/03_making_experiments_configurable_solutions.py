@@ -13,7 +13,7 @@
 # ---
 
 # %% [markdown]
-# # Configuring an Experiment
+# # Making Experiments Configurable
 #
 # Designing an experiment involves making lots of different choices, for example: What different conditions are being tested? What stimuli are presented? How many trials does the experiment contain?
 # Often, as we pilot our studies or run additional control experiments, we want to change some aspect of our experiment.

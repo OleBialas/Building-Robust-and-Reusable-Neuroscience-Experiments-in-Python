@@ -12,15 +12,9 @@
 #     name: python3
 # ---
 
-# %%
-from unittest.mock import Mock, patch
-
-# %%
-
 # %% [markdown]
-# ## Making Code More Testable: Utilizing Mocks and Patches in pytest
-
-# %% [markdown]
+# # Testing with Mocks and Patches
+#
 # Some code is particularly challenging to test, either because it is:
 #   - unpredictable (e.g. functions with random stochastic steps),
 #   - dependent on access to private or large data files,
@@ -28,6 +22,9 @@ from unittest.mock import Mock, patch
 #   - depends on other systems out of our control.
 #
 # How can we ensure that the code we write works the way it does in these cases?  We can **"Mock"** out the difficult-to-test parts!
+
+# %%
+from unittest.mock import Mock, patch
 
 # %% [markdown]
 # ---

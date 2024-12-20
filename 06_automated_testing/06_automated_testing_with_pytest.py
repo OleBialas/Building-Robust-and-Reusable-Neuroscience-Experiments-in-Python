@@ -13,7 +13,7 @@
 # ---
 
 # %% [markdown]
-# # VII. Automated Testing
+# # Automated Testing with Pytest
 #
 # Manual testing is an integral part of software development. However, it does not scale well with the size of a project. The more your codebase grows the more time you have to spend testing. What's more, as things become more complex it becomes difficult to understanded all the interactions between different part of your code and it is easy to break one part of your program by modifying another one.
 # This is where automated testing are invaluable. By building a suite of tests you can constantly verify that your code works as expected and that new features are being integrated properly!
