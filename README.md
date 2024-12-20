@@ -34,3 +34,25 @@ If you experience any trouble while following installation, you can post your pr
 ### Day 3
 
 - [9: Fixtures for Testihng with Temporary Directories](./09_fixtures/09_fixtures_for_testing_with_temporary_directories.py)
+- [10: Distributing your Experiment as a Package (Demo)](./10_packaging/10_distributing_your_experiment_as_a_package_demo.py)
+
+## Notebooks
+
+There is one notebook per session with exercises of increasing difficulty.
+Exceptions are session 8, which contains a single coding projects and session 10 which contains a demo.
+Solutions to all exercises can be found in the "solutions" folder.
+
+Because Jupyter notebooks are not well suited for version control, they were converted to Python scripts using Jupytext.
+To convert them back into notebooks, install this package:
+
+```sh
+pip install git+https://github.com/OleBialas/Python-Notebook-Converter.git
+```
+
+Then, clone this repo, `cd` into it and convert the python files to notebooks:
+
+```sh
+git clone https://github.com/OleBialas/Building-Robust-and-Reusable-Neuroscience-Experiments-in-Python.git
+cd Building-Robust-and-Reusable-Neuroscience-Experiments-in-Python
+notebook-convert . -f python -t notebook
+```
